@@ -1,0 +1,26 @@
+.products-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.wrapper{
+    width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.search{
+    width: 400px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 20px;
+}
