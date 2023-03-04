@@ -1,0 +1,40 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // border-bottom: 1px solid #333;
+    // padding: 10px 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .brand{
+        a{
+            text-decoration: none;
+        }
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        cursor: pointer;
+        color: slategray;
+        &:hover{
+            color: #232323;
+        }
+
+    }
+    .top{
+        width: 40%;
+        .nav-search{
+            width: 100%;
+            padding: 15px;
+            outline: none;
+            border: none;
+        }
+        .onFocus{
+            box-shadow: rgba(161, 160, 160, 0.25) 0px 10px 38px, rgba(163, 163, 163, 0.22) 0px 10px 10px;
+        }
+    }
+    .cart{
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            background: #eee;
+        }
+    }
+}

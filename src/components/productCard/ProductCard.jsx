@@ -8,7 +8,7 @@ const ProductCard = (props) => {
         <div className='product-card'>
             <img src={thumbnail} alt="" />
             {/* <Carousal images={images} /> */}
-            <div className='product-details'>
+            <div className='productcard-details'>
             <h1 className='product-price'>${price}</h1>
             <h1 className='product-title'>{title}</h1>
             <p>{brand}</p>

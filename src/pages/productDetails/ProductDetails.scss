@@ -1,0 +1,37 @@
+.product-details{
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    .product-img{
+        flex: 1;
+    }
+    .product-description{
+        flex: 1;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        text-align: left;
+        .brand{
+            font-size: 40px;
+        }
+.category{
+    font-size: 15px;
+    color: lightblue;
+}
+.title{
+
+}
+.desc{
+    color: rgb(162, 158, 158);
+}
+.price{
+    font-size: 30px;
+}
+.discount{
+    font-size: 20px;
+    color: rgb(14, 138, 14);
+}
+    }
+}

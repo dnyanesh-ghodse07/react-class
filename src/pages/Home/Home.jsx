@@ -1,44 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import Navabar from '../../components/navbar/Navbar';
 import ProductCard from '../../components/productCard/ProductCard';
 import data from '../../data/data.json';
-import './Home.css'
+import './Home.scss'
 
-const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [inputText, setInputText] = useState('');
-
-  useEffect(() => {
-    setProducts(data.products);
-  },[])
-
-  const handleSearch = (e) => {
-    setInputText(e.target.value);
-  }
-
-  useEffect(() => {
-    if(inputText){
-      const filteredProducts = products.filter((product) => product.title.toLowerCase().includes(inputText.toLowerCase()));
-      setProducts(filteredProducts);
-    }else{
-      setProducts(data.products);
-    }
-  },[inputText])
-
+const Home = ({products}) => {
   return (
-    <div>
-      <div className='top'>
-          <input className='search' type="text" placeholder='Search' onChange={handleSearch} />
-      </div>
+    <>
       <div className='products-container'>
         <div className="wrapper">
-        {
-          products.map((product) => {
-            return <ProductCard key={product.id} product={product}/>
-          })
-        }
+          {
+            products.map((product) => {
+              return <Link to={`product-details/${product.id}`}><ProductCard key={product.id} product={product} /></Link>
+            })
+          }
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
