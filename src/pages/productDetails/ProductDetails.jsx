@@ -9,6 +9,7 @@ const Product = data.products.filter((product) => product.id == id);
 const {brand,title,images,category,description,discountPercentage,price,rating,stock} = Product[0];
   return (
     <div className='product-details'>
+      <div className="product-details-wrapper">
        <div className="product-img">
             <img src={images[0]} alt="" />
        </div>
@@ -18,7 +19,11 @@ const {brand,title,images,category,description,discountPercentage,price,rating,s
          <p className='desc'>{description}</p>
          <h2 className='price'>$ {price} <span className='discount'>{discountPercentage}%</span></h2>
          <p>Rating: {rating}</p>
+       <div className="add-to-cart">
+        <button className='btn'>Add To Cart</button>
        </div>
+       </div>
+      </div>
     </div>
   )
 }

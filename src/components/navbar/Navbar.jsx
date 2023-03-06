@@ -20,6 +20,7 @@ const Navabar = ({products, setProducts}) => {
       setProducts(data.products);
     }
   },[inputText])
+
   return (
     <div className='nav'>
       
