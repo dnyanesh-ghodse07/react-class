@@ -7,6 +7,7 @@ import data from './data/data.json';
 import ProductDetails from './pages/productDetails/ProductDetails';
 import Navabar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import ShopContextProvider from './context/ShopContext';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -16,13 +17,15 @@ function App() {
   }, [data.products])
   return (
     <div className="App">
-      <Navabar products={products} setProducts={setProducts} />
-      <Routes>
-        <Route path='/' element={<Home products={products} setProducts={setProducts}/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/product-details/:id' element={<ProductDetails/>}/>
-      </Routes>
-      <Footer/>  
+      <ShopContextProvider>
+        <Navabar products={products} setProducts={setProducts} />
+        <Routes>
+          <Route path='/' element={<Home products={products} setProducts={setProducts}/>}/>
+          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/product-details/:id' element={<ProductDetails/>}/>
+        </Routes>
+        <Footer/>
+      </ShopContextProvider>  
     </div>
   );
 }

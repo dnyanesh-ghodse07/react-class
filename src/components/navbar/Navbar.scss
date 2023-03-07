@@ -30,9 +30,20 @@
         }
     }
     .cart{
+        position: relative;
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;
+        .cart-icon{
+            font-size: 14px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: rgb(73, 172, 225);
+            color: #eee;
+            padding: 4px;
+            border-radius: 50%;
+        }
         &:hover{
             background: #eee;
         }
