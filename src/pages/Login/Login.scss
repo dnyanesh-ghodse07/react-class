@@ -1,0 +1,57 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+
+    .login {
+        width: 400px;
+        height: 500px;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            width: 100%;
+            input {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        .password {
+            width: 100%;
+            input {
+                width: 100%;
+
+                padding: 10px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            button {
+                padding: 10px;
+                width: 100%;
+                background: rgb(61, 151, 211);
+                color: #eee;
+                cursor: pointer;
+                &:hover{
+                    background: rgb(41, 125, 180);
+                }
+            }
+        }
+        .error{
+            color: red;
+        }
+    }
+}

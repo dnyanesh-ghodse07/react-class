@@ -8,7 +8,7 @@ const Cart = () => {
   const { cartItems, removeFromCart } = useContext(ShopContext);
   const cartProducts = data.products.filter(product => cartItems[product.id] !== 0)
   console.log(cartProducts);
-
+// dshjkfhkjsd
   const totalCartPrice = cartProducts.map(product => Number(cartItems[product.id]) * Number(product.price));
   const totalCartD = cartProducts.map(product => cartItems[product.id] * product.discountPercentage);
   
