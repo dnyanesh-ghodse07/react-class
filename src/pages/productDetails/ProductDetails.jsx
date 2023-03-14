@@ -3,6 +3,7 @@ import "./ProductDetails.scss"
 import { useParams } from 'react-router-dom';
 import data from '../../data/data.json';
 import { ShopContext } from '../../context/ShopContext';
+import Carousal from '../../components/carousal/Carousal';
 
 
 const ProductDetails = () => {
@@ -14,7 +15,7 @@ const ProductDetails = () => {
     <div className='product-details'>
       <div className="product-details-wrapper">
         <div className="product-img">
-          <img src={images[0]} alt="" />
+          <Carousal images={images}/>
         </div>
         <div className="product-description">
           <h2 className='brand'>{brand} <span className='category'>{category}</span></h2>
